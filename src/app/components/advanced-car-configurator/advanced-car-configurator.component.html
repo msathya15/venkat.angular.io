@@ -1,0 +1,27 @@
+
+<h1>Step 2: Select your Config and Options</h1>
+<div>
+<label for="selectedConfig">Configuration:</label>
+
+<select id="selectedConfig" [(ngModel)]="selectedConfig" name="selectedConfig" (change)="onChange()">
+    <option value="" disabled selected>Choose...</option>
+  <option *ngFor="let conf of configurations;" [value]="conf">{{ conf }}    
+  </option>
+</select>
+</div>
+<ng-template [ngIf]="showRange">
+    Range: 
+<input id="range" [(ngModel)]="selectedCar.range" readonly style="width: 300px;">
+</ng-template>
+<div>
+<label>
+    Tow Hitch
+    <input type="checkbox" [(ngModel)]="selectedCar.includeTow"> 
+  </label>
+</div>
+<div>
+    <label>
+        Yoke Steering Wheel?
+        <input type="checkbox" [(ngModel)]="selectedCar.includeYoke"> 
+      </label>
+    </div>

@@ -1,0 +1,29 @@
+<h1>Step 3: Summary</h1>
+
+<h3>Your Tesla {{selectedCar.model}}</h3>
+<table>
+    <tr>
+        <h4><td>{{selectedCar.configSelect}}</td></h4>
+        <td></td>
+        <td>{{configCost| currency : 'USD'}}</td>
+    </tr>
+    <tr>
+        <td>Range: {{selectedCar.range}}</td>        
+    </tr>
+    <tr *ngIf="selectedCar.includeTow">
+        <td>Tow Hitch Package</td>
+        <td></td>
+        <td>{{towCost | currency : 'USD'}}</td>
+    </tr>
+    <tr *ngIf="selectedCar.includeYoke">
+        <td>Yoke Package</td>
+        <td></td>
+        <td>{{yokeCost | currency : 'USD'}} </td>
+    </tr>
+    <tr>
+        <h3><td>TOTAL COST</td></h3>
+        <td></td>
+        <h3><td>{{totalCost | currency : 'USD' }} </td></h3>
+    </tr>
+</table>
+

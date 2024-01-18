@@ -1,0 +1,27 @@
+<h1>Step 1: Choose your Model and Color</h1>
+<div>
+<label for="model">Model:</label>
+
+<select id="model" [(ngModel)]="selectedModelID" name="selectedModel" (ngModelChange)="onChange()">
+    <option value="" disabled selected>Choose...</option>
+  <option *ngFor="let car of carList" [ngValue]="car.id">{{ car.model }}</option>
+</select>
+
+</div>
+<ng-template [ngIf]="selectedCar.model.length !== 0">
+  <label for="color">Color:</label>
+<select id="color" [(ngModel)]="selectedColor" name="selectedColor" (ngModelChange)="onColorChange()">
+  <option value="" disabled selected>Choose...</option>
+  <option *ngFor="let carColor of selectedCar.colors" [ngValue]="carColor">{{ carColor.name }}</option>
+</select>  
+</ng-template>
+<div *ngIf="showpic">
+{{selectedCar.colors[0].name}}
+<img [src]="selectedCar.colors[0].image" alt="...">
+</div>
+
+
+
+
+
+  

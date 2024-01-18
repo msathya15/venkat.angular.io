@@ -1,0 +1,156 @@
+ [
+      { 
+        "id":1,
+        "modelCode": "S",
+        "model": "ModelS",
+        "colors": [
+          {
+            "name": "Red",
+            "image": "https://interstate21.com/tesla-app/images/S/red.jpg"
+          },
+          {
+            "name": "Blue",
+            "image": "https://interstate21.com/tesla-app/images/S/blue.jpg"
+          },
+          {
+            "name": "Black",
+            "image": "https://interstate21.com/tesla-app/images/S/black.jpg"
+          },
+          {
+            "name": "Grey",
+            "image": "https://interstate21.com/tesla-app/images/S/grey.jpg"
+          },
+          {
+            "name": "White",
+            "image": "https://interstate21.com/tesla-app/images/S/white.jpg"
+          }
+        ],
+        "configSelect": "config",
+        "range": " ",
+        "includeTow": false,
+        "includeYoke": false,
+        "basicPrice": 50000
+      },
+      {
+        "id":2,
+        "modelCode": "X",
+        "model": "ModelX",
+        "colors": [
+          {
+            "name": "Red",
+            "image": "https://interstate21.com/tesla-app/images/X/red.jpg"
+          },
+          {
+            "name": "Blue",
+            "image": "https://interstate21.com/tesla-app/images/X/blue.jpg"
+          },
+          {
+            "name": "Black",
+            "image": "https://interstate21.com/tesla-app/images/X/black.jpg"
+          },
+          {
+            "name": "Grey",
+            "image": "https://interstate21.com/tesla-app/images/X/grey.jpg"
+          },
+          {
+            "name": "White",
+            "image": "https://interstate21.com/tesla-app/images/X/white.jpg"
+          }
+        ],
+        "configSelect": "config",
+        "range": " ",
+        "includeTow": false,
+        "includeYoke": false,
+        "basicPrice": 60000
+      },
+      { 
+        "id":3,
+        "modelCode": "C",
+        "model": "CyberTRuck",
+        "colors": [
+          {
+            "name": "Black",
+            "image": "https://interstate21.com/tesla-app/images/C/black.jpg"
+          },
+          {
+            "name": "Grey",
+            "image": "https://interstate21.com/tesla-app/images/C/grey.jpg"
+          },
+          {
+            "name": "White",
+            "image": "https://interstate21.com/tesla-app/images/C/white.jpg"
+          }
+        ],
+        "configSelect": "config",
+        "range": " ",
+        "includeTow": false,
+        "includeYoke": false,
+        "basicPrice": 50000
+      },
+      { 
+        "id":4,
+        "modelCode": "Y",
+        "model": "ModelY",
+        "colors": [
+          {
+            "name": "Red",
+            "image": "https://interstate21.com/tesla-app/images/Y/red.jpg"
+          },
+          {
+            "name": "Blue",
+            "image": "https://interstate21.com/tesla-app/images/Y/blue.jpg"
+          },
+          {
+            "name": "Black",
+            "image": "https://interstate21.com/tesla-app/images/Y/black.jpg"
+          },
+          {
+            "name": "Grey",
+            "image": "https://interstate21.com/tesla-app/images/Y/grey.jpg"
+          },
+          {
+            "name": "White",
+            "image": "https://interstate21.com/tesla-app/images/Y/white.jpg"
+          }
+        ],
+        "configSelect": "config",
+        "range": " ",
+        "includeTow": false,
+        "includeYoke": false,
+        "basicPrice": 50000
+      },
+      { 
+        "id":5,
+        "modelCode": "3",
+        "model": "Model3",
+        "colors": [
+          {
+            "name": "Red",
+            "image": "https://interstate21.com/tesla-app/images/3/red.jpg"
+          },
+          {
+            "name": "Blue",
+            "image": "https://interstate21.com/tesla-app/images/3/blue.jpg"
+          },
+          {
+            "name": "Black",
+            "image": "https://interstate21.com/tesla-app/images/3/black.jpg"
+          },
+          {
+            "name": "Grey",
+            "image": "https://interstate21.com/tesla-app/images/3/grey.jpg"
+          },
+          {
+            "name": "White",
+            "image": "https://interstate21.com/tesla-app/images/3/white.jpg"
+          }
+        ],
+        "configSelect": "config",
+        "range": " ",
+        "includeTow": false,
+        "includeYoke": false,
+        "basicPrice": 50000
+      }
+    ]
+  
+  
