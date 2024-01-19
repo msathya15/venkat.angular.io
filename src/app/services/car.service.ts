@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CarService {
   private jsonUrl ="assets/data.json";
+  private apiUrl="https://localhost:4200/models";
   carList:Car[]=[]
   private selectedCar = new BehaviorSubject<Car>(null);
   selectedCar$ = this.selectedCar.asObservable();
@@ -18,7 +19,10 @@ export class CarService {
     this.selectedCar.next(car);
   }
   constructor(private http: HttpClient) { }
-  
+
+  getall() : Observable<any[]> {
+    console.log(this.http.any<any[]>(this.apiUrl));
+  }
   getListOfCars() : Observable<Car[]> {
     console.log(this.http.get<Car[]>(this.jsonUrl));
     return this.http.get<Car[]>(this.jsonUrl);
