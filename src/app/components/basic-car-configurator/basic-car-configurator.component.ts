@@ -22,6 +22,10 @@ export class BasicCarConfiguratorComponent implements OnInit{
     this.selectedCar=new Car();
   }
   ngOnInit(): void {
+    this.service.getall().subscribe(data=>{
+      console.log("data");
+      console.log(data);
+    });
     this.service.getListOfCars().subscribe(data=>{
       this.carList=data;
     },
