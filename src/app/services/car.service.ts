@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CarService {
   private jsonUrl ="assets/data.json";
-  private apiUrl="https://localhost:4200/models"
+  private apiUrl="http://localhost:4200/models"
   carList:Car[]=[]
   private selectedCar = new BehaviorSubject<Car>(null);
   selectedCar$ = this.selectedCar.asObservable();
