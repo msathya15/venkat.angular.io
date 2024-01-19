@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree, Router  } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CarService } from '../services/car.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ConfigGuard  {
+export class ConfigGuard implements CanActivate {
   private modelCompleted = true;
   private configCompleted = true;
   constructor(private router: Router,private service:CarService) {}
