@@ -10,7 +10,8 @@ import { Config } from '../model/config';
 })
 export class CarService {
   
-  private apiUrl:string="http://localhost:4200/assets"
+  //private apiUrl:string="http://localhost:4200/assets"
+  private apiUrl:string="assets"
   carList:Car[]=[]
   private selectedCar = new BehaviorSubject<Car>(null);
   selectedCar$ = this.selectedCar.asObservable();
