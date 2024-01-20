@@ -23,7 +23,7 @@ export class CarService {
   constructor(private http: HttpClient) { }
   
   getListOfCars() : Observable<Car[]> {        
-    return this.http.get<Car[]>(`${this.apiUrl}/models.json`);    
+    return this.http.get<Car[]>(`${this.apiUrl}`);    
   }
   
   
