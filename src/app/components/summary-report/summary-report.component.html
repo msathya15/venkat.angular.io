@@ -3,27 +3,27 @@
 <h3>Your Tesla {{selectedCar.model}}</h3>
 <table>
     <tr>
-        <h4><td>{{selectedCar.configSelect}}</td></h4>
-        <td></td>
-        <td>{{configCost| currency : 'USD'}}</td>
+        <h4><td>{{selectedCar.configSelect[0].config}}</td></h4>
+        <td>{{selectedCar.basicPrice | currency : 'USD'}}</td>
     </tr>
     <tr>
-        <td>Range: {{selectedCar.range}}</td>        
+        <td>Range: {{selectedCar.configSelect[0].range}}</td>        
+    </tr>
+    <tr>
+        <td>{{selectedCar.colors[0].name}}</td>
+        <td>{{colorCost | currency : 'USD'}}</td>
     </tr>
     <tr *ngIf="selectedCar.includeTow">
         <td>Tow Hitch Package</td>
-        <td></td>
         <td>{{towCost | currency : 'USD'}}</td>
     </tr>
     <tr *ngIf="selectedCar.includeYoke">
-        <td>Yoke Package</td>
-        <td></td>
+        <td>Yoke Package</td>        
         <td>{{yokeCost | currency : 'USD'}} </td>
     </tr>
     <tr>
         <h3><td>TOTAL COST</td></h3>
-        <td></td>
-        <h3><td>{{totalCost | currency : 'USD' }} </td></h3>
+        <td>{{totalCost | currency : 'USD' }} </td>
     </tr>
 </table>
 

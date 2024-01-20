@@ -22,23 +22,20 @@ export class BasicCarConfiguratorComponent implements OnInit{
     this.selectedCar=new Car();
   }
   ngOnInit(): void {
-    this.service.getall().subscribe(data=>{
-      console.log("data");
-      console.log(data);
-    });
+    
     this.service.getListOfCars().subscribe(data=>{
+      
       this.carList=data;
-    },
+          },
     (error) => {
         console.error('Error fetching car data:', error);
       });    
-
+      
       
   }
   onChange(){
-    this.service.getCarById(this.selectedModelID).subscribe(data=>{
-      this.selectedCar=data;
-    });
+    this.selectedCar=this.carList.find(car=>car.id===this.selectedModelID);   
+    
   }
   
   onColorChange(){    

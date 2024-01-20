@@ -1,4 +1,4 @@
- [
+[
       { 
         "id":1,
         "modelCode": "S",
@@ -25,11 +25,19 @@
             "image": "https://interstate21.com/tesla-app/images/S/white.jpg"
           }
         ],
-        "configSelect": "config",
-        "range": " ",
+        "configSelect": [
+          { 
+            "config": "Dual Motor All-Wheel Drive",
+            "range" : "335mi Range 149mph Top Speed "
+          },
+          {
+            "config": "Tri Motor All-Wheel Drive",
+            "range" :"405mi Range 130mph Top Speed "
+          }
+        ],
         "includeTow": false,
         "includeYoke": false,
-        "basicPrice": 50000
+        "basicPrice": 71090
       },
       {
         "id":2,
@@ -57,11 +65,19 @@
             "image": "https://interstate21.com/tesla-app/images/X/white.jpg"
           }
         ],
-        "configSelect": "config",
-        "range": " ",
+        "configSelect": [
+          { 
+            "config": "Dual Motor All-Wheel Drive",
+            "range" : "335mi Range 149mph Top Speed "
+          },
+          {
+            "config": "Tri Motor All-Wheel Drive",
+            "range" :"335mi Range 149mph Top Speed "
+          }
+        ],
         "includeTow": false,
         "includeYoke": false,
-        "basicPrice": 60000
+        "basicPrice": 79990
       },
       { 
         "id":3,
@@ -81,11 +97,23 @@
             "image": "https://interstate21.com/tesla-app/images/C/white.jpg"
           }
         ],
-        "configSelect": "config",
-        "range": " ",
+        "configSelect": [
+          { 
+            "config": "Rear-Wheel Drive",
+            "range" : "250mi Range 6.5 SEC. 0-60 MPH "
+          },
+          { 
+            "config": "All-Wheel Drive",
+            "range" : "340mi Range 112mph Top Speed "
+          },
+          {
+            "config": "Cyber Beast",
+            "range" :"320mi Range 130mph Top Speed "
+          }
+        ],
         "includeTow": false,
         "includeYoke": false,
-        "basicPrice": 50000
+        "basicPrice": 96390
       },
       { 
         "id":4,
@@ -113,11 +141,16 @@
             "image": "https://interstate21.com/tesla-app/images/Y/white.jpg"
           }
         ],
-        "configSelect": "config",
-        "range": " ",
+        "configSelect": [
+          { 
+            "config": "Dual Motor All-Wheel Drive",
+            "range" : "310mi Range 120mph top Speed "
+          }
+          
+        ],
         "includeTow": false,
         "includeYoke": false,
-        "basicPrice": 50000
+        "basicPrice": 32890
       },
       { 
         "id":5,
@@ -145,11 +178,19 @@
             "image": "https://interstate21.com/tesla-app/images/3/white.jpg"
           }
         ],
-        "configSelect": "config",
-        "range": " ",
+        "configSelect": [
+          { 
+            "config": "Rear-Wheel Drive",
+            "range" : "272mi Range 125mph top speed "
+          },
+          { 
+            "config": "Dual Motor All-Wheel Drive",
+            "range" : "272mi Range 125mph top speed "
+          }
+        ],
         "includeTow": false,
         "includeYoke": false,
-        "basicPrice": 50000
+        "basicPrice": 35990
       }
     ]
   

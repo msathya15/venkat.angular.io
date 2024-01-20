@@ -10,7 +10,7 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class SummaryReportComponent implements OnInit {
   selectedCar:Car;
-  configCost:number=0;
+  
   colorCost:number=0;
   towCost:number=0;
   yokeCost:number=0;
@@ -26,13 +26,6 @@ export class SummaryReportComponent implements OnInit {
       console.log(this.selectedCar);
     })
     
-    //configuration cost
-    if(this.selectedCar.configSelect=="Rear Wheel Drive")
-      this.configCost=this.selectedCar.basicPrice+5000;
-    else if(this.selectedCar.configSelect=="Dual Motor Ali-Wheel Drive")
-      this.configCost=this.selectedCar.basicPrice+8000;
-    else if(this.selectedCar.configSelect=="Cyberbeast - Tri Motor All-Wheel Drive")
-      this.configCost=this.selectedCar.basicPrice+10000;
     //color cost
     if(this.selectedCar.colors[0].name=="Satinblack")
       this.colorCost=6500;
@@ -49,7 +42,8 @@ export class SummaryReportComponent implements OnInit {
 
     if(this.selectedCar.includeYoke)
       this.yokeCost=1500;
-     this.totalCost=this.configCost+this.colorCost+this.yokeCost+this.yokeCost;
+     
+      this.totalCost=this.selectedCar.basicPrice+this.colorCost+this.yokeCost+this.towCost;
     
   }
 

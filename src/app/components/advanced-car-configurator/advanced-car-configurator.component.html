@@ -3,15 +3,16 @@
 <div>
 <label for="selectedConfig">Configuration:</label>
 
-<select id="selectedConfig" [(ngModel)]="selectedConfig" name="selectedConfig" (change)="onChange()">
+<select id="selectedConfig" [(ngModel)]="selectedConfig" name="selectedConfig" (ngModelChange)="onChange()">
     <option value="" disabled selected>Choose...</option>
-  <option *ngFor="let conf of configurations;" [value]="conf">{{ conf }}    
+  <option *ngFor="let conf of selectedCar.configSelect" [ngValue]="conf">{{ conf.config }}    
   </option>
 </select>
+
 </div>
 <ng-template [ngIf]="showRange">
     Range: 
-<input id="range" [(ngModel)]="selectedCar.range" readonly style="width: 300px;">
+<input id="range" [(ngModel)]="selectedCar.configSelect[0].range" style="width: 300px;">
 </ng-template>
 <div>
 <label>

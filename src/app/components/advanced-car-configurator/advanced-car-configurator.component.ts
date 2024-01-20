@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router,NavigationEnd } from '@angular/router';
 import { Car } from 'src/app/model/car';
+import { Config } from 'src/app/model/config';
 import { CarService } from 'src/app/services/car.service';
 
 @Component({
@@ -10,38 +11,37 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class AdvancedCarConfiguratorComponent implements OnInit {
   id: string;
+  range:string="";
   selectedCar:Car;
-  selectedConfig:string;
+  selectedConfig:Config;
   showRange:boolean=false;
-  configurations:string[]=["Rear Wheel Drive","Dual Motor Ali-Wheel Drive","Cyberbeast - Tri Motor All-Wheel Drive"];
-  ranges:string[]=["300 miles - Max Speed: 150","340 miles - Max Speed: 112","400 miles - Max Speed: 180"];
+  configurations:string[]=[]
   constructor(private route: ActivatedRoute,private service:CarService,private router: Router) {
-    
+    this.selectedConfig=new Config();
   }
 
   ngOnInit(): void {
     this.service.selectedCar$.subscribe(car=>{
       this.selectedCar=car;
     })
+    
+    
+    console.log(this.selectedCar);
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-          this.service.setSelectedCar(this.selectedCar);
-          
+          this.service.setSelectedCar(this.selectedCar);          
           console.log('Navigated to YourComponent');   
           console.log(this.selectedCar)  
                
         }
       });
-
     }
   onChange(){
-    this.showRange=true;
-    this.selectedCar.configSelect=this.selectedConfig;
-     const selectedIndex = this.configurations.indexOf(this.selectedConfig);  
-      this.selectedCar.range = selectedIndex !== -1 ? this.ranges[selectedIndex] : '';
-      console.log(this.selectedCar)
-      this.service.configChosen=true;
-      console.log(this.service.configChosen);
+    this.showRange=true;   
+    this.service.configChosen=true;
+    this.selectedCar.configSelect[0]=this.selectedConfig;
+    this.service.setSelectedCar(this.selectedCar);    
     } 
+    
   
 }
